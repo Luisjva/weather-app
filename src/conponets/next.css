@@ -1,0 +1,21 @@
+.days {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #222;
+  margin: .5rem;
+  border-radius: 3px;
+  font-size: .9rem;
+}
+
+.days div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%
+}
+
+.days img {
+  width: 60%
+}

@@ -1,0 +1,172 @@
+.more {
+  padding: 1rem;
+}
+
+.more-div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.more-of-today {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.more-of-today p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.box {
+  padding: .7rem;
+}
+
+/*     Wind     */
+.wind {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #222;
+  margin: .5rem;
+  border-radius: 3px;
+}
+
+.wind div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.wind div p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.wind div img {
+  width: .8rem;
+  height: .8rem;
+  padding: .3rem;
+  transform: rotate(-45deg);
+  border-radius: 50%;
+  background: #fff6;
+  margin-right: .3rem;
+}
+
+/*     Humidity     */
+.humidity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #222;
+  margin: .5rem;
+  border-radius: 3px;
+}
+
+.humidity-div{
+  width: 100%;
+  height: 1.1rem;
+  position: relative;
+}
+
+.numeros {
+  position: absolute;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -50%;
+  background: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.numeros p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  color: #fff6;
+  font-size: .8rem;
+}
+
+.progreso {
+  background: #fff6;
+  width: 90%;
+  height: .35rem;
+  border-radius: .3rem;
+  margin: .8rem auto 0 auto;
+}
+
+.progreso span {
+  background: #ffec65;
+  height: 100%;
+  display: block;
+  border-radius: .3rem;
+}
+
+/*     Visibility     */
+.visibility {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #222;
+  margin: .5rem;
+  border-radius: 3px;  
+}
+
+.principal {
+  font-size: 3rem;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding: .8rem;
+}
+
+.principal span {
+  font-size: 1.5rem;
+}
+
+@media screen and (min-width: 550px){
+  .more {
+    overflow-y: scroll;
+    padding: 1rem;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .more-div {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .more-of-today {
+    width: 90%
+  }
+
+  .more-div {
+    width: 90%
+  }  
+}
+
+@media screen and (min-width: 900px) {
+  .more-of-today {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .more-div {
+    grid-template-columns: repeat(5, 1fr);
+    width: 85%
+  }
+  
+  .more {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .more-of-today {
+    width: 85%
+  }
+}
