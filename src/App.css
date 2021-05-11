@@ -1,5 +1,5 @@
 * {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 html {
@@ -12,13 +12,13 @@ html {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto;
-  background: black;
+  background: #232036;
   color: #fff;
 }
 
 .today-temperature {
   position: sticky;
-  height: 100vh
+  height: 100vh;
 }
 
 h2 {
@@ -39,8 +39,8 @@ h2 {
   border-radius: 2px;
   outline: none;
   color: #fff;
-  padding: .3rem;
-  cursor: pointer
+  padding: 0.3rem;
+  cursor: pointer;
 }
 
 /*    Weather     */
@@ -61,7 +61,7 @@ h2 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  opacity: .2;
+  opacity: 0.2;
   z-index: 1;
 }
 
@@ -78,7 +78,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 27.27%
+  height: 27.27%;
 }
 
 .temperature p {
@@ -89,18 +89,18 @@ h2 {
   margin-block-end: 0;
 }
 
-.temperature p span{  
+.temperature p span {
   position: absolute;
   font-size: 2rem;
   right: 0;
   transform: translateX(95%);
   top: 55%;
-  opacity: .3;
+  opacity: 0.3;
 }
 
 /*     Description    */
 .description {
-  opacity: .7;
+  opacity: 0.6;
   height: 13.63%;
   display: flex;
   justify-content: center;
@@ -117,8 +117,8 @@ h2 {
   margin-block-start: 0;
   margin-block-end: 0;
   text-align: center;
-  font-size: .8rem;
-  color: #fff6
+  font-size: 0.8rem;
+  color: #fff6;
 }
 
 /*     City     */
@@ -126,14 +126,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff5
-}
-
-/*     More     */
-.more {
-  position: relative;
-  z-index: 10;
-  background-color: #333;
+  color: #fff5;
 }
 
 @media screen and (min-width: 550px) {

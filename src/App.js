@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import More from './conponets/more';
+import MoreDiv from './conponets/more-div';
 import NextDays from './conponets/nextday';
 import Today from './conponets/today.js'
 
@@ -8,6 +9,7 @@ class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
+      seach: false,
       //Data of the day
       temperature: null,
       description: null,
@@ -51,6 +53,8 @@ class App extends React.Component {
         code: null
       }
     }
+    this.changeSeach = this.changeSeach.bind(this)
+    this.changeCity = this.changeCity.bind(this)
   }
   componentDidMount() {
     //data's today
@@ -63,8 +67,6 @@ class App extends React.Component {
         day = day.slice(0, position)
         let date = new Date(day)
         console.log(date)
-
-        console.log(res.data[0].wind_cdir_full)
 
 
 
@@ -120,6 +122,57 @@ class App extends React.Component {
       })
   }
 
+  changeSeach(seach) {
+    this.setState({seach})
+  }
+
+  changeCity(bueno) {
+    console.log(bueno.target.innerHTML)
+    this.setState({
+      seach: false,
+      temperature: null,
+      description: null,
+      date: null,
+      city: null,
+      windStatus: null,
+      windDirection: null,
+      humidity: null,
+      visibility: null,
+      airPressure: null,
+      code: null,
+      day1: {
+        tempMax: null,
+        tempMin: null,
+        dateTime: null,
+        code: null,
+      },
+      day2: {
+        tempMax: null,
+        tempMin: null,
+        dateTime: null,
+        code: null,
+      },
+      day3: {
+        tempMax: null,
+        tempMin: null,
+        dateTime: null,
+        code: null,
+      },
+      day4: {
+        tempMax: null,
+        tempMin: null,
+        dateTime: null,
+        code: null,
+      },
+      day5: {
+        tempMax: null,
+        tempMin: null,
+        dateTime: null,
+        code: null
+      }
+    })
+  }
+
   render() {
     return (
       <div className="App">
@@ -133,50 +186,37 @@ class App extends React.Component {
           date={this.state.date}
           city={this.state.city}
           code={this.state.code}
+          seach={this.state.seach}
+          changeSeach={this.changeSeach}
+          changeCity={this.changeCity}
         />
 
         <div className="more">
-          <div className="more-div">
-            <NextDays
-              tempMax={this.state.day1.tempMax}
-              tempMin={this.state.day1.tempMin}
-              dateTime="Tomorrow"
-              code={this.state.day1.code}
-            />
-            <NextDays
-              tempMax={this.state.day2.tempMax}
-              tempMin={this.state.day2.tempMin}
-              dateTime={this.state.day2.dateTime}
-              code={this.state.day2.code}
-            />
-            <NextDays
-              tempMax={this.state.day3.tempMax}
-              tempMin={this.state.day3.tempMin}
-              dateTime={this.state.day3.dateTime}
-              code={this.state.day3.code}
-            />
-            <NextDays
-              tempMax={this.state.day4.tempMax}
-              tempMin={this.state.day4.tempMin}
-              dateTime={this.state.day4.dateTime}
-              code={this.state.day4.code}
-            />
-            <NextDays
-              tempMax={this.state.day5.tempMax}
-              tempMin={this.state.day5.tempMin}
-              dateTime={this.state.day5.dateTime}
-              code={this.state.day5.code}
-            />
-          </div>
 
-          <h2>Today's Hightlights</h2>
-          <More
-            windStatus={this.state.windStatus}
-            windDirection={this.state.windDirection}
-            humidity={this.state.humidity}
-            visibility={this.state.visibility}
-            airPressure={this.state.airPressure}
-          />
+
+          {this.state.day1.code == null ? 
+            <div></div> : 
+            <MoreDiv 
+              day1={this.state.day1} 
+              day2={this.state.day2} 
+              day3={this.state.day3} 
+              day4={this.state.day4} 
+              day5={this.state.day5} 
+            />
+          }
+
+
+          
+          {this.state.windStatus == null ? 
+            <div></div> : 
+            <More 
+              windStatus={this.state.windStatus} 
+              windDirection={this.state.windDirection} 
+              humidity={this.state.humidity} 
+              visibility={this.state.visibility} 
+              airPressure={this.state.airPressure} 
+            />
+          }
         </div>
       </div>
     );

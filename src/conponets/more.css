@@ -1,5 +1,9 @@
 .more {
   padding: 1rem;
+  position: relative;
+  z-index: 10;
+  background-color: #04001D
+  ;
 }
 
 .more-div {
@@ -27,7 +31,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #222;
+  background: #232036;
   margin: .5rem;
   border-radius: 3px;
 }
@@ -60,7 +64,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: #222;
+  background: #232036;
   margin: .5rem;
   border-radius: 3px;
 }
@@ -110,7 +114,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: #222;
+  background: #232036;
   margin: .5rem;
   border-radius: 3px;  
 }
@@ -124,6 +128,7 @@
 
 .principal span {
   font-size: 1.5rem;
+  opacity: .6;
 }
 
 @media screen and (min-width: 550px){

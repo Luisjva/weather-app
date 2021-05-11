@@ -1,0 +1,25 @@
+.seach {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: #222036;
+}
+
+.button {
+  height: 9.09%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 85%;
+  margin: auto;
+}
+.button button {
+  background: none;
+  border: none;
+  outline: none;
+  color: #fff9;
+  font-size: 1.2rem;
+}

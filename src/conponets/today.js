@@ -1,9 +1,14 @@
 import React from "react"
+import Seach from "./seach";
+import City from "./today/city";
+import Temperature from "./today/temperature";
+import WeatherImg from "./today/weather-img";
 
 class Today extends React.Component {
   constructor(props) {
     super(props)
     this.picture = this.picture.bind(this)
+    this.changeSeach = this.changeSeach.bind(this)
   }
 
   picture() {
@@ -67,27 +72,31 @@ class Today extends React.Component {
     return `/img/${clima}.png`
   }
 
+  changeSeach() {
+    let value = !this.props.seach
+    this.props.changeSeach(value)
+  }
+
   render() {
     return (
       <div className="today-temperature">
 
-
+        {this.props.seach ? <Seach changeSeach={this.changeSeach} changeCity={this.props.changeCity}/> : <div></div>}
         <div className="form">
-          <button>Seach for places</button>
+          <button onClick={this.props.changeSeach}>Seach for places</button>
         </div>
-
 
         <div className="weather-img">
           <div>
             <img src="/img/Cloud-background.png" alt="" />
           </div>
-          <img className="weather-img__weather" src={this.picture()} alt="img" />
+          {this.props.code == null ? <div></div> : <WeatherImg picture={this.picture()}/>}
         </div>
+        
 
 
-        <div className="temperature">
-          <p>{this.props.temperature}<span>°C</span></p>
-        </div>
+        {this.props.temperature == null ? <div></div> : <Temperature temperature={this.props.temperature}/>}
+        
 
 
         <div className="description">
@@ -95,12 +104,10 @@ class Today extends React.Component {
         </div>
 
 
-        <p className="date">Today</p>
+        {this.props.description == null ? <div></div> : <p className="date">Today</p>}
 
-        <div className="city">
-          <img src="/img/location.svg" alt="" />
-          <p>{this.props.city}</p>
-        </div>
+
+        {this.props.city == null ? <div></div> : <City city={this.props.city} />}
       </div>
     )
   }
