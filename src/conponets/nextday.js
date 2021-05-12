@@ -65,7 +65,7 @@ class NextDays extends Component {
     }
 
 
-    return `/img/${clima}.png`
+    return `https://raw.githubusercontent.com/Luisjva/weather-app/main/public/img/${clima}.png`
   }
 
   render() {

@@ -69,7 +69,7 @@ class Today extends React.Component {
     }
 
 
-    return `/img/${clima}.png`
+    return `https://raw.githubusercontent.com/Luisjva/weather-app/main/public/img/${clima}.png`
   }
 
   changeSeach() {
@@ -88,7 +88,7 @@ class Today extends React.Component {
 
         <div className="weather-img">
           <div>
-            <img src="/img/Cloud-background.png" alt="" />
+            <img src="https://raw.githubusercontent.com/Luisjva/weather-app/main/public/img/Cloud-background.png" alt="background" />
           </div>
           {this.props.code == null ? <div></div> : <WeatherImg picture={this.picture()}/>}
         </div>

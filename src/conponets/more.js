@@ -12,7 +12,7 @@ class More extends Component {
             <p>Wind status</p>
             <p className="principal">{this.props.windStatus}<span>mph</span></p>
             <div>
-              <img src="/img/send.svg" alt="" />
+              <img src="https://raw.githubusercontent.com/Luisjva/weather-app/main/public/img/send.svg" alt="" />
               <p>{this.props.windDirection}</p>
             </div>
           </div>
