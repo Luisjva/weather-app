@@ -4,18 +4,23 @@
   justify-content: center;
   align-items: center;
   background: #232036;
-  margin: .5rem;
+  margin: 0.5rem;
   border-radius: 3px;
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
 .days div {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  width: 100%
+  width: 100%;
+  color: #fff6;
+}
+
+.days div p:first-child {
+  color: #fffd;
 }
 
 .days img {
-  width: 60%
+  width: 60%;
 }

@@ -2,8 +2,7 @@
   padding: 1rem;
   position: relative;
   z-index: 10;
-  background-color: #04001D
-  ;
+  background-color: #04001d;
 }
 
 .more-div {
@@ -22,7 +21,7 @@
 }
 
 .box {
-  padding: .7rem;
+  padding: 0.7rem;
 }
 
 /*     Wind     */
@@ -32,7 +31,7 @@
   justify-content: center;
   align-items: center;
   background: #232036;
-  margin: .5rem;
+  margin: 0.5rem;
   border-radius: 3px;
 }
 
@@ -49,13 +48,13 @@
 }
 
 .wind div img {
-  width: .8rem;
-  height: .8rem;
-  padding: .3rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  padding: 0.3rem;
   transform: rotate(-45deg);
   border-radius: 50%;
   background: #fff6;
-  margin-right: .3rem;
+  margin-right: 0.3rem;
 }
 
 /*     Humidity     */
@@ -65,11 +64,11 @@
   align-items: center;
   flex-direction: column;
   background: #232036;
-  margin: .5rem;
+  margin: 0.5rem;
   border-radius: 3px;
 }
 
-.humidity-div{
+.humidity-div {
   width: 100%;
   height: 1.1rem;
   position: relative;
@@ -90,22 +89,22 @@
   margin-block-start: 0;
   margin-block-end: 0;
   color: #fff6;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .progreso {
   background: #fff6;
   width: 90%;
-  height: .35rem;
-  border-radius: .3rem;
-  margin: .8rem auto 0 auto;
+  height: 0.35rem;
+  border-radius: 0.3rem;
+  margin: 0.8rem auto 0 auto;
 }
 
 .progreso span {
   background: #ffec65;
   height: 100%;
   display: block;
-  border-radius: .3rem;
+  border-radius: 0.3rem;
 }
 
 /*     Visibility     */
@@ -115,23 +114,23 @@
   align-items: center;
   flex-direction: column;
   background: #232036;
-  margin: .5rem;
-  border-radius: 3px;  
+  margin: 0.5rem;
+  border-radius: 3px;
 }
 
 .principal {
   font-size: 3rem;
   margin-block-start: 0;
   margin-block-end: 0;
-  padding: .8rem;
+  padding: 0.8rem;
 }
 
 .principal span {
   font-size: 1.5rem;
-  opacity: .6;
+  opacity: 0.6;
 }
 
-@media screen and (min-width: 550px){
+@media screen and (min-width: 550px) {
   .more {
     overflow-y: scroll;
     padding: 1rem;
@@ -145,25 +144,14 @@
 }
 
 @media screen and (min-width: 800px) {
-  .more-of-today {
-    width: 90%
-  }
-
+  .more-of-today,
   .more-div {
-    width: 90%
-  }  
+    width: 90%;
+    margin: auto;
+  }
 }
 
 @media screen and (min-width: 900px) {
-  .more-of-today {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .more-div {
-    grid-template-columns: repeat(5, 1fr);
-    width: 85%
-  }
-  
   .more {
     display: flex;
     flex-direction: column;
@@ -172,6 +160,16 @@
   }
 
   .more-of-today {
-    width: 85%
+    grid-template-columns: 1fr 1fr;
+    margin: auto;
+  }
+
+  .more-container {
+    width: 71.5vw;
+  }
+
+  .more-div {
+    grid-template-columns: repeat(5, 1fr);
+    width: 100%;
   }
 }

@@ -1,4 +1,5 @@
 import { Component } from "react";
+import './listcity.css'
 
 class ChangeCity extends Component {
   constructor(props) {
@@ -14,11 +15,11 @@ class ChangeCity extends Component {
     return(
       <div>
         <ul>
-          <li onClick={this.changeCity}>New York</li>
-          <li onClick={this.changeCity}>Barcelona</li>
-          <li onClick={this.changeCity}>Canada</li>
-          <li onClick={this.changeCity}>Argentina</li>
-          <li onClick={this.changeCity}>Tokio</li>
+          <li onClick={this.changeCity}>New York US</li>
+          <li onClick={this.changeCity}>Barcelona ES</li>
+          <li onClick={this.changeCity}>Montréal CA</li>
+          <li onClick={this.changeCity}>Buenos Aires AR</li>
+          <li onClick={this.changeCity}>Tokyo JP</li>
         </ul>
       </div>
     )

@@ -4,7 +4,7 @@ import "./more.css"
 class More extends Component {
   render() {
     return (
-      <div>
+      <div className="more-container">
         <h2>Today's Hightlights</h2>
         <div className="more-of-today">
 
