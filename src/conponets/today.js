@@ -3,6 +3,7 @@ import Seach from "./seach";
 import City from "./today/city";
 import Temperature from "./today/temperature";
 import WeatherImg from "./today/weather-img";
+import DateTime from './date'
 
 class Today extends React.Component {
   constructor(props) {
@@ -104,7 +105,7 @@ class Today extends React.Component {
         </div>
 
 
-        {this.props.description == null ? <div></div> : <p className="date">Today</p>}
+        {this.props.description == null ? <div></div> : <p className="date">Today · <DateTime date={this.props.date}/></p>}
 
 
         {this.props.city == null ? <div></div> : <City city={this.props.city} />}

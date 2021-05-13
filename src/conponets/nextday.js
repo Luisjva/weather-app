@@ -1,4 +1,5 @@
 import { Component } from "react";
+import DateTime from "./date";
 import './next.css'
 
 class NextDays extends Component {
@@ -71,7 +72,7 @@ class NextDays extends Component {
   render() {
     return (
       <div className="days">
-        <p>{this.props.dateTime}</p>
+        <p><DateTime date={this.props.dateTime}/></p>
         <img src={this.picture()} alt="" />
         <div>
           <p>{this.props.tempMax}°c</p>
